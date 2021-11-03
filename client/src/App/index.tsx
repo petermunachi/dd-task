@@ -85,9 +85,9 @@ function App() {
                   <span className="" onClick={()=>setPageId(2)}>Add New Proposals</span>
                 </div>
 
-                {/* <div className={activePage(3)}>
+                <div className={activePage(3)}>
                   <span className="" onClick={()=>setPageId(3)}>Signed Proposals</span>
-                </div> */}
+                </div>
 
                 <div className={activePage(4)}>
                   <span className="" onClick={()=>setPageId(4)}>About</span>
