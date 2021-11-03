@@ -4,9 +4,6 @@ import { unlockAccount } from "../api/web3";
 import useAsync from "../components/useAsync";
 import { useWeb3Context } from "../contexts/Web3";
 
-import Logo from "../assets/logo.png";
-import BgImg from "../assets/top-img.png";
-
 import { shortenAddress } from "../utils/helper";
 import Page from "../components/GetPage";
 
@@ -43,7 +40,6 @@ function App() {
         <div className="d-flex align-items-center justify-content-between">
           <div className="title-header d-flex align-items-center">
             <div className="img-container">
-              <img alt="logo" src={Logo} width="100%" height="100%" />
             </div>
             <h1 className="header-text">simple channel system</h1>
           </div>
@@ -70,7 +66,6 @@ function App() {
               <div className="upper-part bg-blue">
 
                 <div className="box-img-container">
-                  <img alt="logo" src={BgImg} width="100%" height="100%" />
                 </div>
                 
               </div>
