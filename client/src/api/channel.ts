@@ -106,25 +106,13 @@ export async function submitTx(web3: Web3, account: string, message: string, bal
 
    const channel = await Channel.deployed();
 
-   const bytesSignatures = [];
-
    const nonce = await getNonce(web3);
 
-     console.log({nonce});
-
-
-  //  for (let i = 0; i < signatures.length; i++) {
-  //    bytesSignatures[i] = bytes;
-     
-  //   }
     const bytes1 = web3.utils.asciiToHex(signature1);
     const bytes2 = web3.utils.asciiToHex(signature2);
 
     const bal1 = web3.utils.toWei(balance1.toString(), 'ether');
     const bal2 = web3.utils.toWei(balance2.toString(), 'ether');
-
-    console.log(nonce, message, balance1, balance2, bytes1, bytes2);
-        // function submitTx(uint _nonce, bytes32 _message, uint _balance1, uint _balance2, bytes memory _signature1, bytes memory _signature2) 
 
 
     const isVerified = await channel.submitTx(nonce, message, bal1, bal2, signature1, signature2, {
